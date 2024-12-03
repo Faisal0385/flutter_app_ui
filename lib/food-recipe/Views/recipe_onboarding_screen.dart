@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_ui/food-recipe/colors.dart';
+import 'package:flutter_app_ui/food-recipe/Colors/colors.dart';
 
 class RecipeOnBoardingScreen extends StatefulWidget {
   const RecipeOnBoardingScreen({super.key});
