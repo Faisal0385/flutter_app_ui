@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_ui/food-recipe/Colors/colors.dart';
+import 'package:flutter_app_ui/food-recipe/Views/home_screen.dart';
 
 class RecipeOnBoardingScreen extends StatefulWidget {
   const RecipeOnBoardingScreen({super.key});
@@ -19,15 +20,7 @@ class _RecipeOnBoardingScreenState extends State<RecipeOnBoardingScreen> {
           Container(
             height: size.height * 0.625,
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Colors.grey.shade400,
-                  Colors.grey.shade200,
-                  Colors.white,
-                ],
-              ),
+              gradient: gradient,
               image: const DecorationImage(
                   image: AssetImage('assets/images/background 1.png'),
                   fit: BoxFit.cover),
@@ -71,7 +64,14 @@ class _RecipeOnBoardingScreenState extends State<RecipeOnBoardingScreen> {
                     height: 20,
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => const HomeScreenRecipe(),
+                        ),
+                      );
+                    },
                     child: Container(
                       height: 55,
                       decoration: BoxDecoration(
